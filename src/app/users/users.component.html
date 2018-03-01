@@ -1,0 +1,9 @@
+<span>Users: </span>
+<ul *ngIf="users">
+  <li *ngFor="let user of users">
+    <button (click)="login()">AAAAAA</button>
+    <a routerLink="/user/{{user.id}}">
+      <span>{{user.name}}</span>
+    </a>
+  </li>
+</ul>

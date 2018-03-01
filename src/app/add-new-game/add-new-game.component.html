@@ -1,0 +1,11 @@
+<div>
+  <label>Game name:
+  <input #gameName>
+  </label>
+
+  <label>Game description:
+    <input #gameDescription>
+  </label>
+
+  <button (click)="addGame(gameName.value, gameDescription.value)">add new game</button>
+</div>

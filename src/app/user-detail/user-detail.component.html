@@ -1,0 +1,39 @@
+<div>
+  <h1>
+    <div *ngIf="loggedUser" then logged else notLogged>
+hello: {{loggedUser.name}} this is:
+    </div>
+    <span *ngIf="isTradeAvaiable">
+      its you! Hello:
+    </span>
+    {{user.name}}
+  </h1>
+  Games:{{id}};
+  <input [(ngModel)]="searchText" placeholder="search text goes here">
+  <ul>
+    <li *ngFor="let game of user.games | pipeFilter : searchText">
+      <a routerLink="/game-detail/{{game.id}}">{{game.name}}</a>
+    </li>
+  </ul>
+  wishes for:
+    <ul>
+    <li *ngFor="let game of user.wishList">
+      <a routerLink="/game-detail/{{game.id}}">{{game.name}}</a>
+    </li>
+  </ul>
+
+  <!--<ul *ngIf="hisTrade">-->
+    <!--<li *ngFor="let game of hisTrade">-->
+      <!--<a routerLink="/game-detail/{{game.id}}">{{game.name}}</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+
+  <!--<ul *ngIf = "yourTrade">-->
+    <!--<li *ngFor="let game of yourTrade">-->
+      <!--<a routerLink="/game-detail/{{game.id}}">{{game.name}}</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+
+</div>
+
+

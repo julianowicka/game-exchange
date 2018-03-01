@@ -1,0 +1,19 @@
+<h2>my games:</h2>
+<ul>
+  <li *ngFor="let game of games"
+      (click)="onGameSelect(game)">
+      <a routerLink="/game-detail/{{game.id}}">
+        <h4>{{game.id}} {{game.name}} {{game.description}}</h4>
+      </a>
+</ul>
+<div>
+    <label>Game name:
+        <input #gameName>
+    </label>
+
+    <label>Game description:
+        <input #gameDescription>
+    </label>
+
+    <button (click)="addGame(gameName.value, gameDescription.value)">add new game</button>
+</div>

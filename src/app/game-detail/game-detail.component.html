@@ -1,0 +1,12 @@
+<div *ngIf="game">
+    <div>
+
+            <span>id:</span>
+            {{game.id}}
+            <span> Name:</span>
+            <span>{{game.name}}</span>
+    </div>
+    <button (click)="goBack()">go back</button>
+    <input [(ngModel)]="game.name" placeholder="name of game!"/><button (click)="updateGame(game)">Save</button>
+    <button (click)="deleteGame(game)">Delete this game from your list</button>
+</div>

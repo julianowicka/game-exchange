@@ -1,0 +1,15 @@
+<h2>Search: </h2>
+<form>
+  <input #searchBox type="search"
+         (keyup)="searchGame(searchBox.value)" />
+  <!--<button type="button"  (click)="searchGame()">Search!</button>-->
+</form>
+
+<div *ngIf="searchResults$">
+  <ul>
+
+    <li *ngFor="let result of searchResults$ | async">
+     <a routerLink="/game-detail/{{result.id}}">{{result.id}} || {{result.name}}</a>
+    </li>
+  </ul>
+</div>

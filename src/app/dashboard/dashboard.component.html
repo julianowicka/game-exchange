@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let game of games"
+      (click)="onGameSelect(game)">
+    <a routerLink="/game-detail/{{game.id}}">
+      <h4>{{game.id}} {{game.name}} {{game.description}}</h4>
+    </a>
+</ul>
+<nav>
+  <a routerLink="/search">
+  search
+  </a>
+</nav>
